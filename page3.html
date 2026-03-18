@@ -3,21 +3,7 @@
 <head>
     <title>Make It Right</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<div class="container">
-    <h2>What can I do to make it right?</h2>
-
-    <input type="text" placeholder="Tell me what I should do..." id="inputBox">
-
-    <button onclick="submit()">Submit</button>
-
-    <p id="finalMessage"></p>
-    <p id="finalMessage"></p>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
 <script>
 (function(){
@@ -40,7 +26,7 @@ function submit(){
     emailjs.send("service_eq4muye", "template_6ahqpuu", params)
     .then(function(){
         document.getElementById("finalMessage").innerText =
-        "Thank you... I’ll do my best to make it right 💙";
+        "Thank you... I'll do my best to make it right 💙";
     }, function(error){
         document.getElementById("finalMessage").innerText =
         "Something went wrong...";
@@ -48,6 +34,21 @@ function submit(){
     });
 }
 </script>
+</head>
+<body>
+
+<div class="container">
+    <h2>What can I do to make it right?</h2>
+
+    <input type="text" placeholder="Tell me what I should do..." id="inputBox">
+
+    <button onclick="submit()">Submit</button>
+
+    <p id="finalMessage"></p>
+    <p id="finalMessage"></p>
+</div>
+
+
 
 </body>
 </html>
